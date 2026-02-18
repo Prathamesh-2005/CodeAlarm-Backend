@@ -18,8 +18,12 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "https://code-alarm-contest.vercel.app/")
+@CrossOrigin(origins = {
+    "https://code-alarm-contest.vercel.app",
+    "http://localhost:5173"
+})
 public class AuthController {
+    
 
     @Autowired
     private AuthenticationManager authenticationManager;

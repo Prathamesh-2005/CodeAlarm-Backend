@@ -17,7 +17,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/reminders")
-@CrossOrigin(origins = "https://code-alarm-contest.vercel.app/")
+@CrossOrigin(origins = {
+    "https://code-alarm-contest.vercel.app",
+    "http://localhost:5173"
+})
 public class ReminderController {
 
     @Autowired
@@ -65,7 +68,6 @@ public class ReminderController {
         try {
             System.out.println("=== GET /my-reminders endpoint hit ===");
 
-            // Check headers
             String authHeader = request.getHeader("Authorization");
             System.out.println("Authorization header: " + authHeader);
             System.out.println("Authorization header exists: " + (authHeader != null));

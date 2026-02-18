@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 @RequestMapping("/api/codechef")
-@CrossOrigin(origins = "https://code-alarm-contest.vercel.app/")
+@CrossOrigin(origins = {
+    "https://code-alarm-contest.vercel.app",
+    "http://localhost:5173"
+})
 public class CodeChefController {
 
     @Autowired

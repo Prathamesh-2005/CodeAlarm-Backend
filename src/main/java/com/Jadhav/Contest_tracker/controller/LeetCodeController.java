@@ -6,13 +6,16 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/leetcode")
-@CrossOrigin(origins = "https://code-alarm-contest.vercel.app/")
+@CrossOrigin(origins = {
+    "https://code-alarm-contest.vercel.app",
+    "http://localhost:5173"
+})
 public class LeetCodeController {
 
     @Autowired
     private LeetCodeService leetCodeService;
 
-    @GetMapping("/fetch") // Changed from POST to GET
+    @GetMapping("/fetch") 
     public String fetch() {
         return leetCodeService.fetchLeetCodeContestsManually();
     }

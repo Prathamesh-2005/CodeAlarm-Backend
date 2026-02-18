@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/codeforces")
-@CrossOrigin(origins = "https://code-alarm-contest.vercel.app/")
+@CrossOrigin(origins = {
+    "https://code-alarm-contest.vercel.app",
+    "http://localhost:5173"
+})
 public class CodeforcesController {
 
     @Autowired

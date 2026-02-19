@@ -11,7 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RequestMapping("/api/codechef")
 @CrossOrigin(origins = {
     "https://code-alarm-contest.vercel.app",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://www.codealarm.tech/"
 })
 public class CodeChefController {
 

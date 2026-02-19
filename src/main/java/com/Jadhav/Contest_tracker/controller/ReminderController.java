@@ -19,7 +19,8 @@ import java.util.Map;
 @RequestMapping("/api/reminders")
 @CrossOrigin(origins = {
     "https://code-alarm-contest.vercel.app",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://www.codealarm.tech/"
 })
 public class ReminderController {
 

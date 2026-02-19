@@ -17,7 +17,8 @@ public class CorsConfig {
         configuration.setAllowedOrigins(
     Arrays.asList(
         "https://code-alarm-contest.vercel.app",
-        "http://localhost:5173"
+        "http://localhost:5173",
+        "https://www.codealarm.tech/"
     )
 );
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
